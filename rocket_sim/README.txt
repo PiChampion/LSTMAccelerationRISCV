@@ -1,21 +1,3 @@
-Simple RISC-V Simulation with Spike and Rocket-Chip
-(c) 2019-2020 W. Rhett Davis
-
-This simple Makefile demonstrates the compilation and simulation of
-a simple RISC-V program with both the Spike simulator and the 
-Rocket-Chip emulator.  The provided "li.c" program is intended to 
-show a simplie example of how to measure the cycles-per-instruction
-and cycles-per-second simulation performace in the context of a 
-single "load-immediate" instruction.  The example can be easily
-extended to more complex programs.
-
-In this example, console output is printed to STDOUT, along with the
-contents of the Machine Performance Counters mcycle and minstret,
-provided that the setStats() function is properly used to start and
-stop these counters, as shown in li.c.  See Section 3.1.15 of the
-RISC-V ISA Manual Vol. II: Privileged Architecture (v. 1.9) for more
-information on these performance counters.
-
 Quick Start Instructions:
 $ source addsetup.sh  (to set up environment for NC State EOS system)
 $ source varsetup.sh  (to set up environment for NC State EOS system)
