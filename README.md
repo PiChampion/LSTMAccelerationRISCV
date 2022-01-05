@@ -1,1 +1,5 @@
-# LSTMAccelerationRISCV
+# Long Short-Term Memory Acceleration on RISC-V Rocket CPU
+
+The project was completed as part of ECE 720 (Electronic System Level and Physical Design) at NC State. In this project, I implemented a simulation of an SoC with one LSTM unit using Transaction Level Modeling in SystemC and use it to process 32 time-steps of a 2-layer LSTM network. The C-program running on the CPU writes memory locations in a DMA unit which signify where to find the inputs and where to write the outputs. The DMA can write memory locations in DRAM or the LSTM unit. The inputs, weight matrices, and bias vectors are stored in DRAM before the simulation begins. At the end of the program, the C-program checks to make sure that the calculation was performed correctly by comparing the output in DRAM to expected outputs.
+
+Using the dedicated LSTM unit and a 1 GHz clock as opposed to running the LSTM code on the CPU and using a 100 MHz clock, the simulation time was reduced from 12,084,460 ns to 85,066 ns. This is a 142x improvement using the LSTM unit and increasing the speed of the modules to 1 GHz.
